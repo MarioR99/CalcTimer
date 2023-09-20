@@ -37,6 +37,12 @@ class Program
         Console.WriteLine("Cos");
         Console.WriteLine("Elapsed time = " + timer.ElapsedMilliseconds + "ms" + timer.ElapsedTicks + "Ticks" );
 
+        timer.Start();
+        Expo(numbers,n);
+        timer.Stop();
+        Console.WriteLine("Expo");
+        Console.WriteLine("Elapsed time = " + timer.ElapsedMilliseconds + "ms" + timer.ElapsedTicks + "Ticks" );
+
 
 
         //int i;
@@ -94,6 +100,17 @@ class Program
             nums[i, 2] = Math.Cos(nums[i, 0]);
         }
     }
+
+      static void Expo(double[,] nums, int count)
+    {
+        int i;
+        for(i=0; i <count; ++i)
+        {
+            nums[i, 1] = Math.Pow(nums[i, 0]);
+        }
+    }
+
+
 
 
 
